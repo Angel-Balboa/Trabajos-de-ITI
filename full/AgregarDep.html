@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Actualizar Empleados</title>
+	<title>Agregar Empresa</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -152,10 +152,10 @@
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-briefcase"></i> <span>Empleados</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Data tables">
-								<li class="nav-item"><a href="Listado_De_Empleados.html" class="nav-link">Listado de Empleados</a></li>
-							<li class="nav-item"><a href="form_inputs.html" class="nav-link active">Registro de Empleados</a></li>
+								<li class="nav-item"><a href="datatable_basic.html" class="nav-link">Listado de Empleados</a></li>
+							<li class="nav-item"><a href="Listado_De_Empleados.html" class="nav-link active">Registro de Empleados</a></li>
 							<li class="nav-item"><a href="Actualizar_Registro.html" class="nav-link active">Actualizar Empleados</a></li>
-							<li class="nav-item"><a href="Solicitud_Vac.html" class="nav-link active">Solicitar Vacaciones</a></li>	
+							<li class="nav-item"><a href="Solicitud_Vac.html" class="nav-link active">Solicitar Vacaciones</a></li>
 							</ul>
 						</li>
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Departamentos</div> <i class="icon-mi-domain" title="Extensions"></i></li>
@@ -163,7 +163,7 @@
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-cube4"></i> <span>Listado de Departamentos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Data tables">
-								<li class="nav-item"><a href="Listado_De_Departamentos.html" class="nav-link">Listado de Departamentos</a></li>
+								<li class="nav-item"><a href="Listado_De_Departamentos.html" class="nav-link">Listado de Departamentos</a></li>						
 							</ul>
 						</li>
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Empresas</div> <i class="icon-mi-domain" title="Extensions"></i></li>
@@ -186,13 +186,13 @@
 
 
 		<!-- Main content -->
-		<div class="content-wrapper bg">
+		<div class="content-wrapper">
 
 			<!-- Page header -->
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Empleados</span> - Actualizar Empleados</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Empresas</span> - Registro de Empresas</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -203,8 +203,8 @@
 					<div class="d-flex">
 						<div class="breadcrumb">
 							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Inicio</a>
-							<a href="Actualizar_Registro.html" class="breadcrumb-item">Empleados</a>
-							<span class="breadcrumb-item active">Actualizar Empleados</span>
+							<a href="AgregarDep.html" class="breadcrumb-item">Empresas</a>
+							<span class="breadcrumb-item active">Registro de Empresas</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -242,8 +242,7 @@
 				<!-- Form inputs -->
 				<div class="card bg-grey-300">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title font-weight-bold">Actualizar Empleados</h5>
-						<i class="icon-pencil mr-3 icon-2x"></i>
+						<h5 class="card-title">Registro de Empresas</h5>
 						<div class="header-elements">
 							<div class="list-icons">
 		                		<a class="list-icons-item" data-action="collapse"></a>
@@ -257,69 +256,83 @@
 
 						<form action="#">
 							<fieldset class="mb-3">
+								<legend class="text-uppercase font-size-sm font-weight-bold">Agreagar</legend>
+
+								<div class="form-group row">
+									<label class="col-form-label col-lg-2 font-weight-bold">Clave</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-indigo border-2">
+									</div>
+								</div>
+
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2 font-weight-bold">Nombre</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Jotaro">
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-indigo border-2">
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">Apellidos</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Kujo">
+									<label class="col-form-label col-lg-2 font-weight-bold">RFC</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-indigo border-2">
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">Titulo</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Practicante">
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label class="col-form-label col-md-2 font-weight-bold">Fecha de Nacimiento</label>
-									<div class="col-md-5">
-										<input class="form-control border-green border-2" type="text" value="21/12/1980">
+									<label class="col-form-label col-md-2 font-weight-bold">Representante</label>
+									<div class="col-md-10">
+										<input class="form-control border-indigo border-2" type="text">
 									</div>
 								</div>
 
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2 font-weight-bold">Correo Electronico</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Jojo@gmail.com">
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-indigo border-2" placeholder="@gmail.com/@hotmail.com">
+									</div>
+								</div>
+
+		                        <div class="form-group row">
+		                        	<label class="col-form-label col-lg-2 font-weight-bold">Seguro Social</label>
+		                        	<div class="col-lg-10">
+			                            <select class="form-control border-indigo border-2">
+			                                <option value="opt1"><span>IMSS</span></option>
+			                                <option value="opt2"><span>ISSSTE</span></option>
+			                            </select>
+		                            </div>
+		                        </div>
+
+								<div class="form-group row">
+									<label class="col-form-label col-lg-2 font-weight-bold">País</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-indigo border-2">
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">País</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Japón">
+									<label class="col-form-label col-lg-2 font-weight-bold">Estado</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-indigo border-2">
 									</div>
 								</div>
 
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2 font-weight-bold">Ciudad</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Tokyo">
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-indigo border-2">
 									</div>
 								</div>
 
-		                        <div class="form-group row">
-		                        	<label class="col-form-label col-lg-2 font-weight-bold">Estado</label>
-		                        	<div class="col-lg-5">
-			                            <select class="form-control border-green border-2">
-			                                <option value="opt1"><span class="badge badge-success">Activo(a)</span></option>
-			                                <option value="opt2"><span class="badge badge-secondary">Inactivo(a)</span></option>
-			                                <option value="opt3"><span class="badge badge-danger">Suspendido(a)</span></option>
-			                            </select>
-		                            </div>
-		                        </div>
-
+								<div class="form-group row">
+									<label class="col-form-label col-lg-2 font-weight-bold">Codigo Postal</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-indigo border-2">
+									</div>
+								</div>
 								
-							<div class="text-center">
-								<button type="submit" class="btn bg-violet">Actualizar <i class="icon-paperplane ml-2"></i></button>
+							<div class="text-right">
+								<button type="submit" class="btn btn-primary">Registrar</button>
 							</div>
 						</form>
 					</div>

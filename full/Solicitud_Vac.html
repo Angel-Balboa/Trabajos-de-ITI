@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Actualizar Empleados</title>
+	<title>Solicitud de Vacaciones</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -24,9 +24,18 @@
 
 	<!-- Theme JS files -->
 	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/anytime.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/pickadate/legacy.js"></script>
+	<script src="../../../../global_assets/js/plugins/notifications/jgrowl.min.js"></script>
 
 	<script src="assets/js/app.js"></script>
 	<script src="../../../../global_assets/js/demo_pages/form_inputs.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/picker_date.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -163,7 +172,7 @@
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-cube4"></i> <span>Listado de Departamentos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Data tables">
-								<li class="nav-item"><a href="Listado_De_Departamentos.html" class="nav-link">Listado de Departamentos</a></li>
+								<li class="nav-item"><a href="Listado_De_Departamentos.html" class="nav-link">Listado de Departamentos</a></li>						
 							</ul>
 						</li>
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Empresas</div> <i class="icon-mi-domain" title="Extensions"></i></li>
@@ -192,7 +201,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Empleados</span> - Actualizar Empleados</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Empleados</span> - Solicitud de Vacaciones</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -203,8 +212,8 @@
 					<div class="d-flex">
 						<div class="breadcrumb">
 							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Inicio</a>
-							<a href="Actualizar_Registro.html" class="breadcrumb-item">Empleados</a>
-							<span class="breadcrumb-item active">Actualizar Empleados</span>
+							<a href="Solicitud_Vac.html" class="breadcrumb-item">Empleados</a>
+							<span class="breadcrumb-item active">Solicitud de Vacaciones</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -242,8 +251,7 @@
 				<!-- Form inputs -->
 				<div class="card bg-grey-300">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title font-weight-bold">Actualizar Empleados</h5>
-						<i class="icon-pencil mr-3 icon-2x"></i>
+						<h5 class="card-title font-weight-bold">Solicitud de Vacaciones</h5>
 						<div class="header-elements">
 							<div class="list-icons">
 		                		<a class="list-icons-item" data-action="collapse"></a>
@@ -258,68 +266,54 @@
 						<form action="#">
 							<fieldset class="mb-3">
 								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">Nombre</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Jotaro">
+									<label class="col-form-label col-lg-2 font-weight-bold">Nombre del Empleado</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-violet border-2">
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">Apellidos</label>
+									<label class="col-form-label col-lg-2 font-weight-bold">Empresa en que trabaja</label>
 									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Kujo">
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">Titulo</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Practicante">
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label class="col-form-label col-md-2 font-weight-bold">Fecha de Nacimiento</label>
-									<div class="col-md-5">
-										<input class="form-control border-green border-2" type="text" value="21/12/1980">
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">Correo Electronico</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Jojo@gmail.com">
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">País</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Japón">
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label class="col-form-label col-lg-2 font-weight-bold">Ciudad</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control border-green border-2" value="Tokyo">
-									</div>
-								</div>
-
-		                        <div class="form-group row">
-		                        	<label class="col-form-label col-lg-2 font-weight-bold">Estado</label>
-		                        	<div class="col-lg-5">
-			                            <select class="form-control border-green border-2">
-			                                <option value="opt1"><span class="badge badge-success">Activo(a)</span></option>
-			                                <option value="opt2"><span class="badge badge-secondary">Inactivo(a)</span></option>
-			                                <option value="opt3"><span class="badge badge-danger">Suspendido(a)</span></option>
+			                           	<select class="form-control border-violet border-2">
+			                                <option value="opt1"><span>Ventas Galaxia</span></option>
+			                                <option value="opt2"><span>Geek Celulares</span></option>
+			                                <option value="opt3"><span>Ciberseguridad Tech</span></option>
+			                                <option value="opt4"><span>Enerhy Crafter</span></option>
+			                                <option value="opt5"><span>Auton GreenStar</span></option>
 			                            </select>
-		                            </div>
-		                        </div>
+									</div>
+								</div>
 
+								<div class="form-group row">
+									<label class="col-form-label col-lg-2 font-weight-bold">Años Trabajando</label>
+									<div class="col-lg-10">
+			                           	<select class="form-control border-violet border-2">
+			                                <option value="opt1"><span>Menos de 1 año</span></option>
+			                                <option value="opt2"><span>1 Año</span></option>
+			                                <option value="opt3"><span>2 Años</span></option>
+			                                <option value="opt4"><span>3 Años</span></option>
+			                                <option value="opt5"><span>4 Años o más</span></option>
+			                            </select>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-form-label col-md-2 font-weight-bold">Seleccione los días de Vacaciones</label>
+									<div class="col-md-5">
+										<input class="form-control border-violet border-2 daterange-basic" type="text" value="01/01/2015 - 01/31/2015">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-form-label col-lg-2 font-weight-bold">Motivos por el cual solicita vacaciones</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control border-violet border-2" placeholder="Espacifique el motivo">
+									</div>
+								</div>
 								
 							<div class="text-center">
-								<button type="submit" class="btn bg-violet">Actualizar <i class="icon-paperplane ml-2"></i></button>
+								<button type="submit" class="btn bg-violet" data-toggle="modal" data-target="#Envio_modal">Solicitar Vacaciones</button>
 							</div>
 						</form>
 					</div>
@@ -328,6 +322,27 @@
 
 			</div>
 			<!-- /content area -->
+
+			<!--Modal de Solicitud-->
+				<div id="Envio_modal" class="modal fade" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header bg-violet">
+								<h5 class="modal-title">Solicitud Enviada</h5>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								<h5>Su solicitud ha sido enviada correctamente, su empresa le notificará si sus vacaciones fueron confirmadas.</h5>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn bg-brown" data-dismiss="modal">Aceptar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!--Fin del Modal de Solicitud-->
 
 
 			<!-- Footer -->
