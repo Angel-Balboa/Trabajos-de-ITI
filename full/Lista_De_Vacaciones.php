@@ -23,11 +23,19 @@
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
-	<script src="../../../../global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/anytime.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/pickadate/legacy.js"></script>
+	<script src="../../../../global_assets/js/plugins/notifications/jgrowl.min.js"></script>
 
 	<script src="assets/js/app.js"></script>
-	<script src="../../../../global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/form_inputs.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/picker_date.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -73,7 +81,6 @@
 
 		<!-- Main sidebar -->
 		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md bg-brown">
-			<body class="sidebar-xs">
 			<!-- Sidebar mobile toggler -->
 			<div class="sidebar-mobile-toggler text-center">
 				<a href="#" class="sidebar-mobile-main-toggle">
@@ -85,7 +92,6 @@
 					<i class="icon-screen-normal"></i>
 				</a>
 			</div>
-			</body>
 			<!-- /sidebar mobile toggler -->
 
 
@@ -181,7 +187,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Empresas</span> - Listado de Empresas</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Vacaciones</span> - Listado de Vacaciones</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 				</div>
@@ -190,8 +196,8 @@
 					<div class="d-flex">
 						<div class="breadcrumb">
 							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Inicio</a>
-							<a href="Listado_De_Empresas.html" class="breadcrumb-item">Empresas</a>
-							<span class="breadcrumb-item active">Listado de Empresas</span>
+							<a href="Lista_De_Vacaciones.html" class="breadcrumb-item">Vacaciones</a>
+							<span class="breadcrumb-item active">Lista de Vacaciones</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -230,7 +236,7 @@
 
 				<div class="card bg-grey-300">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title font-weight-bold">Lista de Empresas</h5>
+						<h5 class="card-title font-weight-bold">Lista de Vacaciones</h5>
 						<div class="header-elements">
 							<div class="list-icons">
 		                		<a class="list-icons-item" data-action="collapse"></a>
@@ -240,107 +246,72 @@
 					</div>
 					<table class="table table-bordered">
 						<thead>
-							<tr class="bg-indigo">
+							<tr class="bg-slate">
 								<th>   </th>
-								<th>Clave</th>
-								<th>Nombre</th>
-								<th>RFC</th>
-								<th>Representante</th>
-								<th>Correo Electronico</th>
-								<th>Seguro Social</th>
-								<th>País</th>
-								<th>Estado</th>
-								<th>Ciudad</th>
-								<th>Codigo Postal</th>
-							</tr>
+								<th>Nombre del Empleado</th>
+								<th>Empresa en que Trabaja</th>
+								<th>Años Trabajando</th>
+								<th>Periodo Vacacional</th>
+								<th>Motivo</th>
 						</thead>
 						<tbody>
-							<tr class="bg-slate-300">
-							<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Emp1_modal"><i class="icon-pencil7"></i></a>
+							<tr class="bg-green-300">
+							<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Vac1_modal"><i class="icon-pencil7"></i></a>
 					    	<a href="#" class="list-icons-item" data-popup="tooltip" title="Borrar" data-toggle="modal" data-target="#Borrar_modal"><i class="icon-trash"></i></a></td>
-								<td>500</td>
+								<td>Marth Reyes Balboa</td>
 								<td>Ventas Galaxia</td>
-								<td>REBA191011CS2</td>
-								<td>Angel Martin Reyes Balboa</td>
-								<td>angelbal@gmail.com</td>
-								<td>IMSS</td>
-								<td>México</td>
-								<td>Tamaulipas</td>
-								<td>Cd. Victoria</td>
-								<td>87089</td>
+								<td>2 años</td>
+								<td>19/Oct/2019 - 30/Oct/2019</td>
+								<td>Problemas Familiares</td>
 							</tr>
-							<tr class="bg-orange-300">
-								<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Emp2_modal"><i class="icon-pencil7"></i></a>
+							<tr class="bg-green-300">
+								<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Vac2_modal"><i class="icon-pencil7"></i></a>
 								<a href="#" class="list-icons-item" data-toggle="modal" data-target="#remove_modal"><i class="icon-trash"></i></a></td>
-								<td>501</td>
+								<td>Jackelyn Martinez Aguilar</td>
 								<td>Geek Celulares</td>
-								<td>HEMJ871002PP6</td>
-								<td>Jose Hernandez Mata</td>
-								<td>Geek@gmail.com</td>
-								<td>IMSS</td>
-								<td>México</td>
-								<td>Nuevo León</td>
-								<td>Monterrey</td>
-								<td>64105</td>	
+								<td>1 año</td>
+								<td>20/Nov/2019 - 25/Nov/2019</td>
+								<td>Muchos días de vacaciones acumulados</td>	
 							</tr>
-							<tr class="bg-slate-300">
-							<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Emp3_modal"><i class="icon-pencil7"></i></a>
+							<tr class="bg-green-300">
+							<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Vac3_modal"><i class="icon-pencil7"></i></a>
 					    	<a href="#" class="list-icons-item" data-toggle="modal" data-target="#remove_modal"><i class="icon-trash"></i></a></td>
-								<td>502</td>
+								<td>Aura Zafiro</td>
 								<td>Ciberseguridad Tech</td>
-								<td>PEGF650309UB5</td>
-								<td>Felix Perez Guzman</td>
-								<td>Cbtech@hotmail.com</td>
-								<td>ISSSTE</td>
-								<td>México</td>
-								<td>Veracruz</td>
-								<td>Veracruz</td>
-								<td>91715</td>
-							</tr>
-							<tr class="bg-orange-300">
-							<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Emp4_modal"><i class="icon-pencil7"></i></a>
+								<td>4 años o más</td>
+								<td>1/Nov/2019 - 8/Nov/2019 </td>
+								<td>Cumpleaños de un familiar</td>
+							<tr class="bg-green-300">
+							<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Vac4_modal"><i class="icon-pencil7"></i></a>
 					    	<a href="#" class="list-icons-item" data-toggle="modal" data-target="#remove_modal"><i class="icon-trash"></i></a>
 					    	</td>
-								<td>503</td>
-								<td>Energy Crafter</td>
-								<td>XEXX010101000</td>
-								<td>Sophia Walter Smith</td>
-								<td>Sophy@hotmail.com</td>
-								<td>IMSS</td>
-								<td>México</td>
-								<td>Jalisco</td>
-								<td>Guadalajara</td>
-								<td>44970</td>
+								<td>DIO	Brando</td>
+								<td>Ventas Galaxia</td>
+								<td>1 año</td>
+								<td>15/Oct/2019 - 25/Oct/2019</td>
+								<td>Familiar enfermo en Egipto</td>
 							</tr>
-							<tr class="bg-slate-300">
-							<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Emp5_modal"><i class="icon-pencil7"></i></a>
+							<tr class="bg-green-300">
+							<td><a href="#" class="list-icons-item" data-toggle="modal" data-target="#Vac5_modal"><i class="icon-pencil7"></i></a>
 					    	<a href="#" class="list-icons-item" data-toggle="modal" data-target="#remove_modal"><i class="icon-trash"></i></a>
 					    	</td>
-								<td>504</td>
+								<td>Chrome Emblem</td>
 								<td>Auto GreenStar</td>
-								<td>AUT130626CP7</td>
-								<td>Miguel Lopez Ortiz</td>
-								<td>GreenAu@gmail.com</td>
-								<td>ISSSTE</td>
-								<td>México</td>
-								<td>Yucatan</td>
-								<td>Merida</td>
-								<td>97088</td>
+								<td>3 años</td>
+								<td>20/Dic/2019 - 2/Ene/2019</td>
+								<td>Pasar la navidad con mi familia</td>
 							</tr>
-				</tbody>
-			</table>
-		</div>
-							<div class="text-center">
-								<button type="submit" class="btn bg-grey">Añadir Departamento <i class="icon-plus2 ml-2"></i><a href="AgregarDep.html"></a></button>
-							</div>	
+						</tbody>
+					</table>
+				</div>
 			</div>
 			<!-- /content area -->
 			<!--Modal de Editar-->
-				<div id="Emp1_modal" class="modal fade" tabindex="-1">
+				<div id="Vac1_modal" class="modal fade" tabindex="-1">
 					<div class="modal-dialog modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header pb-3 bg-blue">
-								<h5 class="modal-title font-weight-bold">Editar Empresa</h5>
+								<h5 class="modal-title font-weight-bold">Editar Vacaciones</h5>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
 
@@ -348,88 +319,49 @@
 								<div class="form-group">
 										<div class="row">
 											<div class="col-lg-5">
-												<label>Clave</label>
-												<input type="text" value="500" class="form-control">
+												<label>Empleado</label>
+												<input type="text" value="Marth Reyes Balboa" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Nombre</label>
+											<div class="col-lg-10">
+												<label>Empresa</label>
 												<input type="text" value="Ventas Galaxia" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>RFC</label>
-												<input type="text" value="REBA191011CS2" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Representante</label>
-												<input type="text" value="Angel Martin Reyes Balboa" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Correo Electronico</label>
-												<input type="text" value="angelbal@gmail.com" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Seguro Social</label>
-			                           				<select class="form-control">
-			                                			<option value="opt1"><span class="badge badge-success">IMSS</span></option>
-			                                			<option value="opt2"><span class="badge badge-secondary">ISSTE</span></option>
+											<div class="col-lg-10">
+												<label>Años trabajando</label>
+			                            			<select class="form-control">
+			                                			<option value="opt1"><span>Menos de 1 año</span></option>
+			                                			<option value="opt2"><span>1 año</span></option>
+			                                			<option value="opt3"><span>2 años</span></option>
+			                                			<option value="opt3"><span>3 años</span></option>
+			                                			<option value="opt3"><span>4 o más años</span></option>
 			                            			</select>
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>País</label>
-												<input type="text" value="México" class="form-control">
+											<div class="col-lg-10">
+												<label>Periodo Vacacional</label>
+												<input class="form-control col-lg-10 daterange-basic" type="text" value="19/10/2019-30/10/2019">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Estado</label>
-												<input type="text" value="Tamaulipas" class="form-control">
+											<div class="col-lg-10">
+												<label>Motivo</label>
+												<input type="text" value="Problemas Familiares" class="form-control">
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Ciudad</label>
-												<input type="text" value="Cd. Victoria" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Codigo Postal</label>
-												<input type="text" value="87089" class="form-control">
-											</div>
-										</div>
-									</div>
-							</div>
-
 							<div class="modal-footer pt-3">
 								<button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
 								<button type="button" class="btn bg-primary">Guardar Cambios</button>
@@ -437,13 +369,14 @@
 						</div>
 					</div>
 				</div>
+				</div>
 				<!--Fin del Modal Editar-->
 				<!--Modal de Editar-->
-				<div id="Emp2_modal" class="modal fade" tabindex="-1">
+				<div id="Vac2_modal" class="modal fade" tabindex="-1">
 					<div class="modal-dialog modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header pb-3 bg-blue">
-								<h5 class="modal-title font-weight-bold">Editar Empresa</h5>
+								<h5 class="modal-title font-weight-bold">Editar Vacaciones</h5>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
 
@@ -451,102 +384,64 @@
 								<div class="form-group">
 										<div class="row">
 											<div class="col-lg-5">
-												<label>Clave</label>
-												<input type="text" value="501" class="form-control">
+												<label>Empleado</label>
+												<input type="text" value="Jackelyn Martinez Aguilar" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Nombre</label>
+											<div class="col-lg-10">
+												<label>Empresa</label>
 												<input type="text" value="Geek Celulares" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>RFC</label>
-												<input type="text" value="HEMJ871002PP6" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Representante</label>
-												<input type="text" value="Jose Hernandez Mata" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Correo Electronico</label>
-												<input type="text" value="Geek@gmail.com" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Seguro Social</label>
-			                           				<select class="form-control">
-			                                			<option value="opt1"><span class="badge badge-success">IMSS</span></option>
-			                                			<option value="opt2"><span class="badge badge-secondary">ISSTE</span></option>
+											<div class="col-lg-10">
+												<label>Años trabajando</label>
+			                            			<select class="form-control">
+			                                			<option value="opt1"><span>Menos de 1 año</span></option>
+			                                			<option value="opt2"><span>1 año</span></option>
+			                                			<option value="opt3"><span>2 años</span></option>
+			                                			<option value="opt3"><span>3 años</span></option>
+			                                			<option value="opt3"><span>4 o más años</span></option>
 			                            			</select>
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>País</label>
-												<input type="text" value="México" class="form-control">
+											<div class="col-lg-10">
+												<label>Periodo Vacacional</label>
+												<input class="form-control col-lg-10 daterange-basic" type="text" value="10/19/2019 - 10/30/2019">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Estado</label>
-												<input type="text" value="Nuevo León" class="form-control">
+											<div class="col-lg-10">
+												<label>Motivo</label>
+												<input type="text" value="Muchos días de vacaciones acumulados" class="form-control">
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Ciudad</label>
-												<input type="text" value="Monterrey" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Codigo Postal</label>
-												<input type="text" value="64105" class="form-control">
-											</div>
-										</div>
-									</div>
-							</div>
-
 							<div class="modal-footer pt-3">
 								<button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
-								<button type="button" class="btn bg-primary">Guardar Cambios</button>
+								<button type="button" class="btn bg-brown" data-dismiss="modal">Guardar Cambios</button>
 							</div>
 						</div>
 					</div>
 				</div>
+				</div>
 				<!--Fin del Modal Editar-->
 				<!--Modal de Editar-->
-				<div id="Emp3_modal" class="modal fade" tabindex="-1">
+				<div id="Vac3_modal" class="modal fade" tabindex="-1">
 					<div class="modal-dialog modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header pb-3 bg-blue">
-								<h5 class="modal-title font-weight-bold">Editar Empresa</h5>
+								<h5 class="modal-title font-weight-bold">Editar Vacaciones</h5>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
 
@@ -554,102 +449,64 @@
 								<div class="form-group">
 										<div class="row">
 											<div class="col-lg-5">
-												<label>Clave</label>
-												<input type="text" value="502" class="form-control">
+												<label>Empleado</label>
+												<input type="text" value="Aura Zafiro" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Nombre</label>
+											<div class="col-lg-10">
+												<label>Empresa</label>
 												<input type="text" value="Ciberseguridad Tech" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>RFC</label>
-												<input type="text" value="PEGF650309UB5" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Representante</label>
-												<input type="text" value="Felix Perez Guzman" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Correo Electronico</label>
-												<input type="text" value="Cbtech@hotmail.com" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Seguro Social</label>
-			                           				<select class="form-control">
-			                                			<option value="opt1"><span class="badge badge-success">ISSTE</span></option>
-			                                			<option value="opt2"><span class="badge badge-secondary">IMSS</span></option>
+											<div class="col-lg-10">
+												<label>Años trabajando</label>
+			                            			<select class="form-control">
+			                                			<option value="opt1"><span>Menos de 1 año</span></option>
+			                                			<option value="opt2"><span>1 año</span></option>
+			                                			<option value="opt3"><span>2 años</span></option>
+			                                			<option value="opt3"><span>3 años</span></option>
+			                                			<option value="opt3"><span>4 o más años</span></option>
 			                            			</select>
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>País</label>
-												<input type="text" value="México" class="form-control">
+											<div class="col-lg-10">
+												<label>Periodo Vacacional</label>
+												<input class="form-control col-lg-10 daterange-basic" type="text" value="11/1/2019 - 11/8/2019">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Estado</label>
-												<input type="text" value="Veracruz" class="form-control">
+											<div class="col-lg-10">
+												<label>Motivo</label>
+												<input type="text" value="Cumpleaños de un familiar" class="form-control">
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Ciudad</label>
-												<input type="text" value="Veracruz" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Codigo Postal</label>
-												<input type="text" value="91715" class="form-control">
-											</div>
-										</div>
-									</div>
-							</div>
-
 							<div class="modal-footer pt-3">
 								<button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
-								<button type="button" class="btn bg-primary">Guardar Cambios</button>
+								<button type="button" class="btn bg-brown" data-dismiss="modal">Guardar Cambios</button>
 							</div>
 						</div>
 					</div>
+				</div>
 				</div>
 				<!--Fin del Modal Editar-->
 				<!--Modal de Editar-->
-				<div id="Emp4_modal" class="modal fade" tabindex="-1">
+				<div id="Vac4_modal" class="modal fade" tabindex="-1">
 					<div class="modal-dialog modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header pb-3 bg-blue">
-								<h5 class="modal-title font-weight-bold">Editar Empresa</h5>
+								<h5 class="modal-title font-weight-bold">Editar Vacaciones</h5>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
 
@@ -657,101 +514,64 @@
 								<div class="form-group">
 										<div class="row">
 											<div class="col-lg-5">
-												<label>Clave</label>
-												<input type="text" value="503" class="form-control">
+												<label>Empleado</label>
+												<input type="text" value="DIO Brando" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Nombre</label>
-												<input type="text" value="Energy Crafter" class="form-control">
+											<div class="col-lg-10">
+												<label>Empresa</label>
+												<input type="text" value="Ventas Galaxia" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>RFC</label>
-												<input type="text" value="XEXX010101000" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Representante</label>
-												<input type="text" value="Sophia Walter Smith" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Correo Electronico</label>
-												<input type="text" value="Sophy@hotmail.com" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Seguro Social</label>
-			                           				<select class="form-control">
-			                                			<option value="opt1"><span class="badge badge-success">IMSS</span></option>
-			                                			<option value="opt2"><span class="badge badge-secondary">ISSTE</span></option>
+											<div class="col-lg-10">
+												<label>Años trabajando</label>
+			                            			<select class="form-control">
+			                                			<option value="opt1"><span>Menos de 1 año</span></option>
+			                                			<option value="opt2"><span>1 año</span></option>
+			                                			<option value="opt3"><span>2 años</span></option>
+			                                			<option value="opt3"><span>3 años</span></option>
+			                                			<option value="opt3"><span>4 o más años</span></option>
 			                            			</select>
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>País</label>
-												<input type="text" value="México" class="form-control">
+											<div class="col-lg-10">
+												<label>Periodo Vacacional</label>
+												<input class="form-control col-lg-10 daterange-basic" type="text" value="10/15/2019 - 10/25/2019">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Estado</label>
-												<input type="text" value="Jalisco" class="form-control">
+											<div class="col-lg-10">
+												<label>Motivo</label>
+												<input type="text" value="Familiar enfermo en Egipto" class="form-control">
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Ciudad</label>
-												<input type="text" value="Guadalajara" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Codigo Postal</label>
-												<input type="text" value="44970" class="form-control">
-											</div>
-										</div>
-									</div>
-							</div>
-
 							<div class="modal-footer pt-3">
 								<button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
-								<button type="button" class="btn bg-primary">Guardar Cambios</button>
+								<button type="button" class="btn bg-brown" data-dismiss="modal">Guardar Cambios</button>
 							</div>
 						</div>
 					</div>
 				</div>
+				</div>
 				<!--Fin del Modal Editar-->
-				<div id="Emp5_modal" class="modal fade" tabindex="-1">
+				<!--Modal de Editar-->
+				<div id="Vac5_modal" class="modal fade" tabindex="-1">
 					<div class="modal-dialog modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header pb-3 bg-blue">
-								<h5 class="modal-title font-weight-bold">Editar Empresa</h5>
+								<h5 class="modal-title font-weight-bold">Editar Vacaciones</h5>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
 
@@ -759,96 +579,57 @@
 								<div class="form-group">
 										<div class="row">
 											<div class="col-lg-5">
-												<label>Clave</label>
-												<input type="text" value="504" class="form-control">
+												<label>Empleado</label>
+												<input type="text" value="Chrome Emblem" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Nombre</label>
+											<div class="col-lg-10">
+												<label>Empresa</label>
 												<input type="text" value="Auto GreenStar" class="form-control">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>RFC</label>
-												<input type="text" value="AUT130626CP7" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Representante</label>
-												<input type="text" value="Miguel Lopez Ortiz" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Correo Electronico</label>
-												<input type="text" value="GreenAu@gmail.com" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Seguro Social</label>
-			                           				<select class="form-control">
-			                                			<option value="opt1"><span class="badge badge-success">ISSSTE</span></option>
-			                                			<option value="opt2"><span class="badge badge-secondary">IMSS</span></option>
+											<div class="col-lg-10">
+												<label>Años trabajando</label>
+			                            			<select class="form-control">
+			                                			<option value="opt1"><span>Menos de 1 año</span></option>
+			                                			<option value="opt2"><span>1 año</span></option>
+			                                			<option value="opt3"><span>2 años</span></option>
+			                                			<option value="opt3"><span>3 años</span></option>
+			                                			<option value="opt3"><span>4 o más años</span></option>
 			                            			</select>
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>País</label>
-												<input type="text" value="México" class="form-control">
+											<div class="col-lg-10">
+												<label>Periodo Vacacional</label>
+												<input class="form-control col-lg-10 daterange-basic" type="text" value="12/20/2019 - 1/2/2020">
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-lg-5">
-												<label>Estado</label>
-												<input type="text" value="Yucatan" class="form-control">
+											<div class="col-lg-10">
+												<label>Motivo</label>
+												<input type="text" value="Pasar la navidad con mi familia" class="form-control">
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Ciudad</label>
-												<input type="text" value="Merida" class="form-control">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-5">
-												<label>Codigo Postal</label>
-												<input type="text" value="97088" class="form-control">
-											</div>
-										</div>
-									</div>
-							</div>
-
 							<div class="modal-footer pt-3">
 								<button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
-								<button type="button" class="btn bg-primary">Guardar Cambios</button>
+								<button type="button" class="btn bg-brown" data-dismiss="modal">Guardar Cambios</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!--Modal de Editar-->
+				</div>
 				<!--Fin del Modal Editar-->
 <!--Modal de Eliminar-->
 				<div id="remove_modal" class="modal fade" role="dialog">
